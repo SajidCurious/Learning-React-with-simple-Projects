@@ -24,11 +24,14 @@ export default function TextForm(props) {
           onChange={handleOnChange}
           rows="8"
         />
-        <button className="primary-btn my-3 mx-8" onClick={convertToUppercase}>
+        <button
+          className="btn btn-primary my-3 mx-8"
+          onClick={convertToUppercase}
+        >
           Convert to Uppercase
         </button>
         <button
-          className="secondary-btn my-3 mx-5"
+          className="btn btn-primary my-3 mx-5"
           onClick={convertToLowercase}
         >
           Convert to Lowercase
