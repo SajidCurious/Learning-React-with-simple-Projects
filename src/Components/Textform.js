@@ -12,12 +12,16 @@ export default function TextForm(props) {
     let lowText = text.toLowerCase();
     setText(lowText);
   };
+  const clearAll = () => {
+    let newText = "";
+    setText(newText);
+  };
 
-  const [text, setText] = useState("Enter the text here");
+  const [text, setText] = useState("");
   return (
     <>
       <div className="container">
-        <h1>{props.heading}</h1>
+        <h2>{props.heading}</h2>
         <textarea
           className="form-control"
           value={text}
@@ -36,9 +40,12 @@ export default function TextForm(props) {
         >
           Convert to Lowercase
         </button>
+        <button type="button" class="btn btn-primary" onClick={clearAll}>
+          Clear Text
+        </button>
       </div>
       <div className="container1">
-        <h1>Your Text Summary</h1>
+        <h2>Your Text Summary</h2>
         <p>
           {text.length} Characters and {text.split(" ").length} Words
         </p>
