@@ -17,6 +17,7 @@ export default function About() {
         color: "black",
         backgroundColor: "white",
       });
+      setMyBtnText("Dark Mode");
     }
   };
   const [myBtnText, setMyBtnText] = useState("Dark Mode");
