@@ -4,6 +4,7 @@ export default function TextForm(props) {
   const convertToUppercase = () => {
     let upText = text.toUpperCase();
     setText(upText);
+    props.showAlert("Converted to Uppercase!", "Success");
   };
   const handleOnChange = (event) => {
     setText(event.target.value);
@@ -11,10 +12,12 @@ export default function TextForm(props) {
   const convertToLowercase = () => {
     let lowText = text.toLowerCase();
     setText(lowText);
+    props.showAlert("Converted to Lowercase!", "Success");
   };
   const clearAll = () => {
     let newText = "";
     setText(newText);
+    props.showAlert("Text Cleared", "Success");
   };
 
   const [text, setText] = useState("");
